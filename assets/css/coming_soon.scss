@@ -1,0 +1,58 @@
+---
+---
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+main {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+  background-image: url("{{ 'assets/img/coming_soon_bg.jpg' | relative_url }}");
+  background-size: cover;
+  background-position: 50% 20%;
+
+
+  @media screen and (orientation: landscape) and (max-height: 668px) {
+    height: 200vh;
+    background-position: 50% 30%;
+  }
+}
+
+.message {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  ////background-color: rgba(240, 128, 128, 0.8);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem 2rem;
+  box-sizing: border-box;
+
+  .name {
+    font-size: 5rem;
+    font-family: 'Nunito', sans-serif;
+
+    @media screen and (max-width: 599px) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (min-width: 1280px) {
+      letter-spacing: 0.2em;
+    }
+  }
+
+  .coming-soon {
+    font-size: 3rem;
+    font-family: 'PT Sans', sans-serif;
+
+    @media screen and (max-width: 599px) {
+      font-size: 1.7rem;
+    }
+  }
+}
