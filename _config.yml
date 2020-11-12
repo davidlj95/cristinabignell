@@ -3,6 +3,7 @@ description: >- # TODO: Define brief
   Actress
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+repository: davidlj95/cristinabignell.com
 
 # Exclude from processing.
 # The following items will not be processed, by default.
