@@ -6,19 +6,24 @@
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 
+$body-bg: {{ site.data.theme.colors.background }};
+$body-fg: {{ site.data.theme.colors.foreground }};
+$accent: {{ site.data.theme.colors.accent }};
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   font-family: $font-family-base;
+  color: $body-fg;
 }
 
 main {
   position: absolute;
   height: 100%;
   min-width: 100%;
-  background-image: url("{{ 'assets/img/coming_soon_bg.jpg' | relative_url }}");
+  background-image: url("/assets/img/coming_soon_bg.jpg");
   background-size: cover;
   background-position: 50% 20%;
 
@@ -32,7 +37,6 @@ main {
 .message {
   position: absolute;
   bottom: 0;
-  color: white;
   width: 100%;
   text-align: center;
   padding: 1rem 2rem 2rem;
@@ -52,6 +56,7 @@ main {
   }
 
   h2 {
+    margin: 0;
     font-size: 3rem;
 
     @include media-breakpoint-down(xs){

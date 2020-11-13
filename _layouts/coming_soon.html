@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     {% include head.html %}
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/coming_soon.css' | relative_url }}" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/coming_soon.css" />
 </head>
 <body>
     {{ content }}
     <main>
         <div class="message">
-            <div class="name">{{ site.title }}</div>
-            <h2>Coming soon...</h2>
+            <div class="name">{{ site.data.coming_soon.name }}</div>
+            <h2>{{ site.data.coming_soon.message }}</h2>
         </div>
     </main>
 </body>
