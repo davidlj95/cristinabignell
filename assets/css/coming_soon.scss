@@ -1,12 +1,17 @@
 ---
 ---
 
+@import "coming_soon/fonts.scss";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: sans-serif;
+  font-family: $font-family-base;
 }
 
 main {
@@ -18,7 +23,7 @@ main {
   background-position: 50% 20%;
 
 
-  @media screen and (orientation: landscape) and (max-height: 668px) {
+  @media screen and (orientation: landscape) and (max-height: breakpoint-max(xs)) {
     height: 200vh;
     background-position: 50% 30%;
   }
@@ -28,7 +33,6 @@ main {
   position: absolute;
   bottom: 0;
   color: white;
-  ////background-color: rgba(240, 128, 128, 0.8);
   width: 100%;
   text-align: center;
   padding: 1rem 2rem 2rem;
@@ -36,22 +40,21 @@ main {
 
   .name {
     font-size: 5rem;
-    font-family: 'Nunito', sans-serif;
+    font-family: $headings-font-family;
 
-    @media screen and (max-width: 599px) {
+    @include media-breakpoint-down(xs){
       font-size: 2.5rem;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include media-breakpoint-up(xl) {
       letter-spacing: 0.2em;
     }
   }
 
-  .coming-soon {
+  h2 {
     font-size: 3rem;
-    font-family: 'PT Sans', sans-serif;
 
-    @media screen and (max-width: 599px) {
+    @include media-breakpoint-down(xs){
       font-size: 1.7rem;
     }
   }
