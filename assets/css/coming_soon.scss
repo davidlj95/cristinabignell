@@ -1,14 +1,14 @@
 ---
 ---
+// Display font
+// https://fonts.google.com/specimen/Nunito
 
-@import "coming_soon/fonts.scss";
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
+// Body font
+// https://fonts.google.com/specimen/PT+Sans
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=PT+Sans&display=swap');
 
-$body-bg: {{ site.data.theme.colors.background }};
-$body-fg: {{ site.data.theme.colors.foreground }};
-$accent: {{ site.data.theme.colors.accent }};
+$font-family-base: "PT Sans", sans-serif;
+$headings-font-family: "Nunito", sans-serif;
 
 body, html {
   margin: 0;
@@ -16,7 +16,7 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: $font-family-base;
-  color: $body-fg;
+  color: white;
 }
 
 main {
@@ -26,12 +26,6 @@ main {
   background-image: url("/assets/img/coming_soon_bg.jpg");
   background-size: cover;
   background-position: 50% 20%;
-
-
-  @media screen and (orientation: landscape) and (max-height: breakpoint-max(xs)) {
-    height: 200vh;
-    background-position: 50% 30%;
-  }
 }
 
 .message {
@@ -45,22 +39,10 @@ main {
   .name {
     font-size: 5rem;
     font-family: $headings-font-family;
-
-    @include media-breakpoint-down(xs){
-      font-size: 2.5rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-      letter-spacing: 0.2em;
-    }
   }
 
   h2 {
     margin: 0;
     font-size: 3rem;
-
-    @include media-breakpoint-down(xs){
-      font-size: 1.7rem;
-    }
   }
 }
